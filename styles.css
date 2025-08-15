@@ -1,4 +1,4 @@
-/* Base */
+
 :root{
   --bg:#0b0f17;
   --card:#101828;
@@ -23,7 +23,7 @@ body{
   line-height:1.6;
 }
 
-/* Header */
+
 .site-header{
   position:sticky; top:0; z-index:50;
   background:rgba(11,15,23,.7);
@@ -76,7 +76,6 @@ body{
   transition: transform .2s ease;
 }
 
-/* Mobile menu */
 .mobile-menu{
   max-width:1100px; margin:0 auto; padding:12px 20px 18px 20px;
   display:flex; flex-direction:column; gap:12px;
@@ -90,7 +89,6 @@ body{
 }
 .contact-mobile{ align-self:flex-start; }
 
-/* Sections */
 .section{ padding:72px 20px; }
 .section.alt{ background:var(--alt); }
 .container{ max-width:1100px; margin:0 auto; }
@@ -129,7 +127,6 @@ body{
 
 .site-footer{ padding:26px 20px; border-top:1px solid rgba(255,255,255,.06); color:var(--muted); }
 
-/* Responsive */
 @media (max-width: 900px){
   .grid{ grid-template-columns: repeat(2, 1fr); }
 }
