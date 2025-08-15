@@ -1,30 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahat Hossain</title>
-</head>
-<link rel="stylesheet" href="style.css">
-<body>
-    <header class="header">
-        <div class="inner">
-            <a href="#home" class="brand" aria-label="Go To Home">
-                <span class="brand-name">Rahat Hossain</span>
-            </a>
-            <nav class="nav-links" aria-label="main">
-               <a href="#home" class="nav-link">Home</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rahat Hossain — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <a href="#home" class="brand" aria-label="Go to home">
+          <span class="brand-name">Rahat Hossain</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="#home" class="nav-link">Home</a>
           <a href="#projects" class="nav-link">Projects</a>
-          <a href="#skills" class="nav-link">Skills</a> 
-            </nav>
-          <a href="#contact" class="btn-contact">Contact Me</a>
-             <button class="hamburger" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <a href="#skills" class="nav-link">Skills</a>
+        </nav>
+        <a href="#contact" class="btn contact-desktop">Contact Me</a>
+        <button class="hamburger" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
-        </div>
+      </div>
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <nav class="mobile-links" aria-label="Mobile">
+          <a href="#home" class="mobile-link">Home</a>
+          <a href="#projects" class="mobile-link">Projects</a>
+          <a href="#skills" class="mobile-link">Skills</a>
+        </nav>
+        <a href="#contact" class="btn contact-mobile">Contact Me</a>
+      </div>
     </header>
+    <section id="home" class="section hero">
+      <div class="container">
+        <h1 class="title">Hi, I am <span>Rahat Hossain</span></h1>
+        <p class="subtitle">Junior Front‑End Developer — I love JavaScript, arrays, and conditions 🚀</p>
+        <div class="cta-row">
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="#contact" class="btn ghost">Hire Me</a>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="h2">Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3 class="h3">Project One</h3>
+            <p>Short description about your cool project. Tech: HTML, CSS, JS.</p>
+            <a href="#" class="link">Live Demo</a>
+          </article>
+          <article class="card">
+            <h3 class="h3">Project Two</h3>
+            <p>Short description about your cool project. Tech: HTML, CSS, JS.</p>
+            <a href="#" class="link">Live Demo</a>
+          </article>
+          <article class="card">
+            <h3 class="h3">Project Three</h3>
+            <p>Short description about your cool project. Tech: HTML, CSS, JS.</p>
+            <a href="#" class="link">Live Demo</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="h2">Skills</h2>
+        <ul class="skills">
+          <li>HTML5</li>
+          <li>CSS3 (Flexbox, Grid)</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Responsive Design</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="h2">Contact</h2>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="row">
+            <label>
+              <span>Name</span>
+              <input required type="text" placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input required type="email" placeholder="your@email.com" />
+            </label>
+          </div>
+          <label class="full">
+            <span>Message</span>
+            <textarea required rows="5" placeholder="Write your message..."></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Rahat Hossain. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
