@@ -1,7 +1,5 @@
-// Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -11,7 +9,6 @@ hamburger.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', !expanded);
 });
 
-// Close menu when clicking a link
 document.querySelectorAll('.mobile-link, .contact-mobile').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
@@ -19,7 +16,6 @@ document.querySelectorAll('.mobile-link, .contact-mobile').forEach(link => {
   });
 });
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
