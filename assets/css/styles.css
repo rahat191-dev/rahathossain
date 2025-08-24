@@ -92,6 +92,10 @@ body{
   justify-self:end; 
 }
 
+.container{   
+  max-width:1100px; 
+  margin:0 auto; 
+}
 .hamburger{
   display:none;
   width:40px; height:40px; 
