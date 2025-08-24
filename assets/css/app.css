@@ -53,9 +53,3 @@ input:focus, textarea:focus {
   opacity: .6; 
   cursor: not-allowed; 
 }
-.status { 
-  text-align: center; 
-  color: var(--muted); 
-  margin-top: 10px; 
-  min-height: 20px; 
-}
