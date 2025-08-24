@@ -1,27 +1,61 @@
-.containers { max-width: 680px; margin: 40px auto; padding: 0 16px; }
-.form { text-align: center; margin-bottom: 18px; }
-.logo { width: 72px; height: 72px; object-fit: contain; display: block; margin: 0 auto 8px; }
-.sub { color: var(--muted); margin-top: 4px; }
+.containers { 
+  max-width: 680px; 
+  margin: 40px auto; 
+  padding: 0 16px;
+}
+.form { 
+  text-align: center; 
+  margin-bottom: 18px; 
+}
+.sub { 
+  color: var(--muted); 
+  margin-top: 4px; 
+}
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px; padding: 18px; backdrop-filter: blur(6px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
-.field { margin-bottom: 14px; display: grid; gap: 6px; }
-label { font-weight: 600; }
+.field { 
+  margin-bottom: 14px; 
+  display: grid; 
+  gap: 6px; 
+}
+label { 
+  font-weight: 600; 
+}
 input, textarea {
-  width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
-  background: var(--input); color: var(--fg); outline: none;
+  width: 100%; 
+  padding: 12px 14px; 
+  border-radius: 12px; 
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--input); 
+  color: var(--fg); 
+  outline: none;
 }
-input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(59,130,246,0.25); }
-button {
-  width: 100%; padding: 12px 14px; border-radius: 12px; border: none; cursor: pointer;
-  background: var(--accent); color: white; font-weight: 700; font-size: 16px;
+input:focus, textarea:focus { 
+  border-color: var(--accent); 
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25); 
 }
-button[disabled] { opacity: .6; cursor: not-allowed; }
-.status { text-align: center; color: var(--muted); margin-top: 10px; min-height: 20px; }
-.foot { text-align: center; color: var(--muted); margin-top: 18px; }
-label .opt {
-    color: rgb(7, 130, 192);
+.submitBtn {
+  width: 100%; 
+  padding: 12px 14px; 
+  border-radius: 12px; 
+  border: none; 
+  cursor: pointer;
+  background: var(--accent); 
+  color: white; 
+  font-weight: 700; 
+  font-size: 16px;
+}
+.submitBtn[disabled] { 
+  opacity: .6; 
+  cursor: not-allowed; 
+}
+.status { 
+  text-align: center; 
+  color: var(--muted); 
+  margin-top: 10px; 
+  min-height: 20px; 
 }
