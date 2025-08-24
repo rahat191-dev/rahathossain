@@ -157,7 +157,6 @@ body{
   animation: appear .3s ease forwards;
 }
 
-/* Staggered animation */
 .mobile-menu.open .mobile-link:nth-child(1),
 .mobile-menu.open .contact-mobile:nth-child(1){ 
   animation-delay:.1s; 
