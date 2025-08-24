@@ -38,7 +38,7 @@ body{
 .site-header .inner{
   max-width:1100px; 
   margin:0 auto; 
-  padding:12px 20px;
+  padding:12px ;
   display:grid; 
   grid-template-columns:auto 1fr auto auto; 
   gap:12px;
@@ -262,12 +262,32 @@ body{
     grid-template-columns:1fr; 
   }
 }
+
+
+
+.hamburger .bar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 .mobile-menu {
-  display: none;
-  flex-direction: column;
-  gap: 12px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .mobile-menu.open {
-  display: flex;
+  max-height: 500px; 
 }
+
