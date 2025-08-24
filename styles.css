@@ -1,3 +1,4 @@
+/* Base */
 :root{
   --bg:#0b0f17;
   --card:#101828;
@@ -28,9 +29,7 @@ body{
 }
 
 .site-header{
-  position:sticky; 
-  top:0; 
-  z-index:50;
+  position:sticky; top:0; z-index:50;
   background:rgba(11,15,23,.7);
   backdrop-filter: blur(8px);
   border-bottom:1px solid rgba(255,255,255,.05);
@@ -38,7 +37,7 @@ body{
 .site-header .inner{
   max-width:1100px; 
   margin:0 auto; 
-  padding:12px ;
+  padding:12px 20px;
   display:grid; 
   grid-template-columns:auto 1fr auto auto; 
   gap:12px;
@@ -73,14 +72,15 @@ body{
   display:inline-block;
   text-decoration:none;
   background:linear-gradient(90deg, var(--brand), var(--brand-2));
-  color:white; padding:10px 16px; border-radius:999px; font-weight:700;
+  color:white; padding:10px 16px; 
+  border-radius:999px; 
+  font-weight:700;
   border:0; 
   cursor:pointer;
   box-shadow:0 6px 20px rgba(79,70,229,.35);
 }
 .btn.ghost{
-  background:transparent; 
-  color:var(--text);
+  background:transparent; color:var(--text);
   border:1px solid rgba(255,255,255,.18);
   box-shadow:none;
 }
@@ -95,8 +95,7 @@ body{
 
 .hamburger{
   display:none;
-  width:40px; 
-  height:40px; 
+  width:40px; height:40px; 
   border-radius:10px;
   background:rgba(255,255,255,.06);
   border:1px solid rgba(255,255,255,.12);
@@ -108,18 +107,33 @@ body{
   height:2px; 
   margin:5px auto;
   background:var(--text);
-  transition: transform .2s ease;
+  transition: transform .3s cubic-bezier(.5, .05, .2, 1),-webkit-transform .3s cubic-bezier(.5, .05, .2, 1);
+}
+.hamburger.open .bar:first-child{ 
+  transform: translateY(7px) rotate(45deg); 
+}
+.hamburger.open .bar:nth-child(2){ 
+  opacity:0; 
+}
+.hamburger.open .bar:last-child{ 
+  transform: translateY(-7px) rotate(-45deg); 
 }
 
 .mobile-menu{
   max-width:1100px; 
-  margin:0 auto; 
-  padding:12px 20px 18px 20px;
-  display:flex; 
-  flex-direction:column; 
-  gap:12px;
+  margin:0 auto;
   background:rgba(11,15,23,.9);
   border-bottom:1px solid rgba(255,255,255,.06);
+  display:grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .4s ease-out;
+}
+.mobile-menu.open{
+  grid-template-rows: 1fr;
+  padding:12px 20px 18px 20px;
+}
+.mobile-menu > div{
+  overflow:hidden;
 }
 .mobile-links{ 
   display:flex; 
@@ -131,10 +145,42 @@ body{
   color:var(--text);
   padding:10px 12px; 
   border-radius:12px; 
-  background:rgba(255,255,255,.04);
+  background:rgba(255,255,255,.04); 
+  opacity:0;
+  transform:translateY(-8px);
+  animation: appear .3s ease forwards;
 }
-.contact-mobile{ 
-  align-self:flex-start; 
+.contact-mobile{
+  align-self:flex-start;
+  opacity:0;
+  transform:translateY(-8px);
+  animation: appear .3s ease forwards;
+}
+
+/* Staggered animation */
+.mobile-menu.open .mobile-link:nth-child(1),
+.mobile-menu.open .contact-mobile:nth-child(1){ 
+  animation-delay:.1s; 
+}
+.mobile-menu.open .mobile-link:nth-child(2),
+.mobile-menu.open .contact-mobile:nth-child(2){ 
+  animation-delay:.2s; 
+}
+.mobile-menu.open .mobile-link:nth-child(3),
+.mobile-menu.open .contact-mobile:nth-child(3){ 
+  animation-delay:.3s; 
+}
+.mobile-menu.open .mobile-link:nth-child(4),
+.mobile-menu.open .contact-mobile:nth-child(4){ 
+  animation-delay:.4s; 
+}
+
+
+@keyframes appear{
+  to{ 
+    opacity:1; 
+    transform:translateY(0); 
+  }
 }
 
 .section{ 
@@ -143,9 +189,10 @@ body{
 .section.alt{ 
   background:var(--alt); 
 }
-.container{ 
+.footer{ 
   max-width:1100px; 
   margin:0 auto; 
+  text-align: center;
 }
 .title{ 
   font-size:40px; 
@@ -241,6 +288,19 @@ body{
   border-top:1px solid rgba(255,255,255,.06); 
   color:var(--muted); 
 }
+#typing-text::after {
+    content: '|';
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #61dafb;
+    }
+}
 
 @media (max-width: 900px){
   .grid{ 
@@ -261,33 +321,5 @@ body{
   .contact-form .row{ 
     grid-template-columns:1fr; 
   }
-}
-
-
-
-.hamburger .bar {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.hamburger.open .bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.open .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open .bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.mobile-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.mobile-menu.open {
-  max-height: 500px; 
 }
 
