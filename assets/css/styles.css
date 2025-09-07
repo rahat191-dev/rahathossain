@@ -26,7 +26,23 @@ body{
   min-height:100vh;
   line-height:1.6;
 }
+.hero {
+  display: flex;
+  justify-content:space-between ;
+  margin-left: 120px
+}
+.section img{
+  max-width:100%; 
+  height: 400px; 
+  display:block; 
+  margin:0 auto;
+}
 
+.brand2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
 .site-header{
   position:sticky; top:0; z-index:50;
   background:rgba(11,15,23,.7);
@@ -288,6 +304,13 @@ body{
   }
   .contact-form .row{ 
     grid-template-columns:1fr; 
+  }
+  .hero{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    gap: 40px;
   }
 }
 
