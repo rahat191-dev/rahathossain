@@ -29,7 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 const textElement = document.getElementById('typing-text');
 const sentences = [
-    "Junior Front‑End Developer.",
+    "Junior Front‑End Web Developer.",
     " I love JavaScript, arrays, and conditions 🚀"
 ];
 
