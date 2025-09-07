@@ -295,6 +295,12 @@ body{
   .nav-links, .contact-desktop{ 
     display:none; 
   }
+  .brand2 {
+    margin-top: 10px;
+  }
+  .section {
+    padding: 0;
+  }
   .hamburger{ 
     display:block; 
     justify-self:end; 
