@@ -299,7 +299,7 @@ body{
     margin-top: 10px;
   }
   .section {
-    padding: 0;
+    padding: 0px 22px;
   }
   .hamburger{ 
     display:block; 
