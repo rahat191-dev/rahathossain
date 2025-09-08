@@ -276,6 +276,22 @@ body{
     content: '|';
     animation: blink-caret .75s step-end infinite;
 }
+.contact-links{
+  display: flex;
+  justify-content: center;
+  bottom:40px; 
+  right:20px; 
+  gap:12px;
+}
+.contact-links a img {
+  width:50px; 
+  height:50px; 
+  border-radius:10px; 
+  background:rgba(255,255,255,.06); 
+  border:1px solid rgba(255,255,255,.12); 
+  padding:10px; 
+  transition: transform .2s ease, box-shadow .2s ease;
+}
 
 @keyframes blink-caret {
     from, to {
