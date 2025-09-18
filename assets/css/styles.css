@@ -386,8 +386,11 @@ body{
   }
   .loader {
     position: fixed;
+     object-fit: cover;
+        display: block;
     top: 0;
     left: 0;
+    right: 0;
     width: 100vw;
     height: 100vh;
     background: rgba(11,15,23,0.8); 
