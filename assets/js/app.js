@@ -1,3 +1,8 @@
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'none';
+});
+
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxEr5W4osr03AMxZ3tXdo83F87gVf68QBlPL_sQAojcKYHSOUgQiTXlyi20UMbIYjcA/exec";
 
 const form = document.getElementById("sheetForm");
