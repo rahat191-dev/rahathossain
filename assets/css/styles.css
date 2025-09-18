@@ -384,11 +384,13 @@ body{
   .nav-links, .contact-desktop{ 
     display:none; 
   }
-   .loader img {
-        width: 100%;
-        height: 100%;
+     .loader img {
+        width: 100vw;
+        height: 100vh;
         object-fit: cover;
-   }
+        display: block;
+        margin: 0;
+    }
   .brand2 {
     margin-top: 10px;
   }
