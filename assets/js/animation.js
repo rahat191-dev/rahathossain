@@ -26,15 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     viewWorkBtn.classList.add("show");
-  }, 500);
+  }, 0);
 
   setTimeout(() => {
     hireMeBtn.classList.add("show");
-  }, 800);
+  }, 500);
 
   setTimeout(() => {
     heroImage.classList.add("show");
-  }, 1100);
+  }, 1000);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
