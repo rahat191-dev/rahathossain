@@ -384,6 +384,19 @@ body{
   .nav-links, .contact-desktop{ 
     display:none; 
   }
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11,15,23,0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden;  
+    z-index: 9999;
+}
      .loader img {
         width: 100vw;
         height: 100vh;
