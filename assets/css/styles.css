@@ -399,9 +399,6 @@ body{
   .grid{ 
     grid-template-columns: 1fr; 
   }
-  .contact-links {
-right: 0;
-  } 
    .contact-form .row{ 
     grid-template-columns:1fr; 
   }
