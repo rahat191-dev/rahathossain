@@ -1,0 +1,68 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+.containers { 
+  max-width: 680px; 
+  margin: 40px auto; 
+  padding: 0 16px;
+}
+.form { 
+  text-align: center; 
+  margin-bottom: 18px; 
+}
+.sub { 
+  color: var(--muted); 
+  margin-top: 4px; 
+}
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 18px; backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.field { 
+  margin-bottom: 14px; 
+  display: grid; 
+  gap: 6px; 
+}
+label { 
+  font-weight: 600; 
+}
+input, textarea {
+  width: 100%; 
+  padding: 12px 14px; 
+  border-radius: 12px; 
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--input); 
+  color: var(--fg); 
+  outline: none;
+}
+input:focus, textarea:focus { 
+  border-color: var(--accent); 
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25); 
+}
+.submitBtn {
+  width: 100%; 
+  padding: 12px 14px; 
+  border-radius: 12px; 
+  border: none; 
+  cursor: pointer;
+  background: var(--accent); 
+  color: white; 
+  font-weight: 700; 
+  font-size: 16px;
+}
+.submitBtn[disabled] { 
+  opacity: .6; 
+  cursor: not-allowed; 
+}
