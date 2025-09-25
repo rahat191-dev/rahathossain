@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
   loader.style.display = 'none';
 });
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxEr5W4osr03AMxZ3tXdo83F87gVf68QBlPL_sQAojcKYHSOUgQiTXlyi20UMbIYjcA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw44pgiIogxQVZvvWUlgrfbZsMSp3Q9BEbcR-arDAfYDp9rvxJJFiylVWnnGBogeJfz/exec";
 
 const form = document.getElementById("sheetForm");
 const btn = document.getElementById("submitBtn");
