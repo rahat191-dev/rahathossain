@@ -385,7 +385,7 @@ body{
   background: rgba(0,0,0,0.7);
   border-radius: 16px;
   z-index: 0;
-  transition: background 0.2s ease;
+  transition: background 0.4s ease;
 }
 
 .card:hover::before {
@@ -399,18 +399,24 @@ body{
 
 .card.card1 {
   background-image: url("/assets/images/bechakena.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  border: none;
 }
 .card.card2 {
   background-image: url("/assets/images/carzone.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  border: none;
 }
 .card.card3 {
   background-image: url("/assets/images/byciclezone.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  border: none;
 }
 
 .card.show {
