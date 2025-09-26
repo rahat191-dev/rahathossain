@@ -382,7 +382,7 @@ body{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.8);
   border-radius: 16px;
   z-index: 0;
   transition: background 0.4s ease;
@@ -405,14 +405,14 @@ body{
   border: none;
 }
 .card.card2 {
-  background-image: url("/assets/images/carzone.png");
+  background-image: url("/assets/images/byciclezone.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
 }
 .card.card3 {
-  background-image: url("/assets/images/byciclezone.png");
+  background-image: url("/assets/images/carzone.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
