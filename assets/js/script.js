@@ -29,8 +29,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 const textElement = document.getElementById('typing-text');
 const sentences = [
-    "Junior Front‑End Web Developer.",
-    " I love JavaScript, arrays, and conditions 🚀"
+    "Front‑End Web Developer.",
+    " I love JavaScript, arrays, conditions and promises"
 ];
 
 let sentenceIndex = 0;
