@@ -3,40 +3,23 @@ window.addEventListener('load', () => {
   loader.style.display = 'none';
 });
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw44pgiIogxQVZvvWUlgrfbZsMSp3Q9BEbcR-arDAfYDp9rvxJJFiylVWnnGBogeJfz/exec";
-
-const form = document.getElementById("sheetForm");
+const form = document.getElementById("netlifyForm");
 const btn = document.getElementById("submitBtn");
 const statusEl = document.getElementById("status");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!name || !email) {
-    statusEl.textContent = "Name and Email are required.";
-    return;
-  }
-
-  const payload = {
-    name, email, phone, message,
-    createdAt: new Date().toISOString(),
-    userAgent: navigator.userAgent
-  };
-
   btn.disabled = true;
   statusEl.textContent = "Sending...";
 
+  const formData = new FormData(form);
+
   try {
-    await fetch(SCRIPT_URL, {
+    await fetch("/", {
       method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      headers: { "Accept": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData)
     });
 
     form.reset();

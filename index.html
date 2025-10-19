@@ -113,7 +113,8 @@
       <p class="sub">For hiring inquiries, please complete this form or contact me directly via email or phone.</p>
     </header>
 
-    <form id="sheetForm" class="card">
+    <form id="netlifyForm" name="contact" method="POST" data-netlify="true" class="card">
+      <input type="hidden" name="form-name" value="contact" /><input type="hidden" name="form-name" value="contact" />
       <div class="field">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Your full name" required />
